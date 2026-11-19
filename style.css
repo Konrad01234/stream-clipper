@@ -1,0 +1,11 @@
+body { margin: 0; background: #fafafa; color: #1a1a1a; font: 16px/1.6 system-ui, sans-serif; }
+main { max-width: 42rem; margin: 0 auto; padding: 2rem 1rem; }
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.15rem; margin-top: 2rem; }
+a { color: #0b57d0; }
+.hinweis { background: #fff3cd; border: 1px solid #e0c060; padding: .5rem .75rem; }
+@media (prefers-color-scheme: dark) {
+  body { background: #161616; color: #e8e8e8; }
+  a { color: #8ab4f8; }
+  .hinweis { background: #3a3000; border-color: #806a00; }
+}
