@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Stream Clipper – Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>TikTok login</h1>
+<p id="info">No code received.</p>
+<p><code id="code" style="word-break:break-all;font-size:1.1rem"></code></p>
+<p><a href="index.html">Back</a></p>
+</main>
+<script>
+  // Shows the authorization code locally in the browser; nothing is sent anywhere.
+  var p = new URLSearchParams(location.search);
+  if (p.get("code")) {
+    document.getElementById("info").textContent = "Copy this code into the login script:";
+    document.getElementById("code").textContent = p.get("code");
+  } else if (p.get("error")) {
+    document.getElementById("info").textContent = "Login failed: " + p.get("error") + " " + (p.get("error_description") || "");
+  }
+</script>
+</body>
+</html>
